@@ -1,0 +1,211 @@
+@font-face {
+  src: url(../fonts/SigmarOne-Regular.ttf);
+  font-family: 'sigmar one';
+}
+@font-face {
+  src: url(../fonts/OpenSans-Bold.ttf);
+  font-family: 'OpenSans-Bold';
+}
+@font-face {
+  src: url(../fonts/OpenSans-Light.ttf);
+  font-family: 'OpenSans-Light';
+}
+@font-face {
+  src: url(../fonts/OpenSans-Regular.ttf);
+  font-family: 'OpenSans-Regular';
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: verdana;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 0.625 px;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  background-color: gray;
+}
+
+/*TOPBAR STYLE*/
+.topbar {
+  background-color: #3498db;
+}
+.topbar::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.topbar__container {
+  width: 80%;
+  margin: auto;
+}
+.topbar__container__left {
+  width: 50%;
+  float: left;
+}
+.topbar__container__left .contact-list {
+  margin-top: .48rem;
+}
+.topbar__container__left .contact-list .contact-list-item {
+  display: inline-block;
+  font-size: 14px;
+  color: #fff;
+}
+.topbar__container__right {
+  width: 50%;
+  float: left;
+}
+.topbar__container__right .social-icon .social-icon-list {
+  text-align: right;
+}
+.topbar__container__right .social-icon .social-icon-list .social-icon-list-item .social-icon-link {
+  color: #fff;
+  display: inline-block;
+  padding: .5rem;
+}
+@media screen and (max-width: 848px) {
+  .topbar__container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .topbar__container__left {
+    width: 100%;
+    float: none;
+  }
+  .topbar__container__left .contact-list {
+    text-align: center;
+  }
+  .topbar__container__right {
+    width: 100%;
+    float: none;
+  }
+  .topbar__container__right .social-icon .social-icon-list {
+    text-align: center;
+  }
+}
+
+/*MAIN TOPBAR STYLE*/
+.header {
+  background-color: #fff;
+  padding: 20px 0px;
+  border-bottom: 2px solid green;
+  border-top: 2px solid yellow;
+}
+.header::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.header__container {
+  width: 80%;
+  margin: auto;
+}
+.header__container__logo {
+  width: 30%;
+  float: left;
+}
+.header__container__menu {
+  width: 70%;
+  float: left;
+}
+.header__container__menu .res-menu {
+  display: none;
+  text-decoration: none;
+}
+.header__container__menu .menu-list {
+  text-align: right;
+}
+.header__container__menu .menu-list .menu-list-item {
+  display: inline-block;
+}
+.header__container__menu .menu-list .menu-list-item .menu-link {
+  color: #000;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-family: "OpenSans-Bold";
+  text-decoration: none;
+  transition: .6s;
+}
+.header__container__menu .menu-list .menu-list-item .menu-link:hover {
+  background-color: green;
+  color: #1abc9c;
+}
+@media screen and (max-width: 848px) {
+  .header__container__logo {
+    width: 100%;
+    float: none;
+    text-align: center;
+  }
+  .header__container__menu {
+    width: 100%;
+    float: none;
+  }
+  .header__container__menu .menu-list {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 600px) {
+  .header__container__menu .res-menu {
+    display: block;
+  }
+  .header__container__menu .menu-list {
+    display: none;
+  }
+  .header__container__menu .menu-list .menu-list-item {
+    display: block;
+  }
+}
+
+/*BANNER STYLE*/
+.banner {
+  width: 100%;
+  height: 90vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url("../img/806117.jpg");
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+.banner__container__banner-content {
+  margin-top: 7rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.banner__container__banner-content .heading {
+  font-family: "sigmar one";
+  font-weight: normal;
+  color: #fff;
+  text-align: center;
+}
+.banner__container__banner-content .description {
+  text-align: center;
+  color: #fff;
+}
+.banner__container__banner-content .button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #fff;
+  text-decoration: none;
+  color: #000;
+  transition: .5s;
+}
+.banner__container__banner-content .button:hover {
+  background-color: red;
+  color: #fff;
+}

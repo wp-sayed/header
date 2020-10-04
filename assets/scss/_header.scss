@@ -1,0 +1,155 @@
+/*TOPBAR STYLE*/
+.topbar{
+	background-color: $primary-color;
+	@include clearfix;
+
+	&__container{
+		@include container;
+        
+        &__left{
+            width: 50%;
+            float: left;
+            .contact-list{
+            	margin-top: .48rem;
+            	.contact-list-item{
+            		display: inline-block;
+            		font-size: 14px;
+            		color: #fff;
+            	}
+            }
+        }
+
+        &__right{
+        	width: 50%;
+        	float: left;
+
+        	.social-icon{
+        		.social-icon-list{
+        			text-align: right;
+        			.social-icon-list-item{
+                       .social-icon-link{
+                       	  color: #fff;
+                       	  display: inline-block;
+                       	  padding: .5rem;
+                       }
+        			}
+        		}
+        	}
+        }
+
+        @media screen and ( max-width: 848px){
+
+                & {
+                    display: flex;
+                    flex-direction: column-reverse;
+                }
+              &__left{
+                    width: 100%;
+                    float: none;
+
+                    .contact-list{
+                        text-align: center;
+                    }
+              }
+
+              &__right{
+                    width: 100%;
+                    float: none;
+
+                    .social-icon{
+                        .social-icon-list{
+                            text-align: center;
+                        }
+                    }
+              }
+        }
+
+	}
+}
+
+/*MAIN TOPBAR STYLE*/
+ .header{
+
+ 	background-color: #fff;
+ 	padding: 20px 0px;
+    border-bottom: 2px solid green;
+    border-top: 2px solid yellow;
+ 	@include clearfix;
+
+ 	&__container{
+ 		@include container;
+
+ 		&__logo{
+            width: 30%;
+            float: left;
+ 		}
+
+ 		&__menu{
+			width: 70%;
+			float: left;
+           
+            .res-menu{
+                display: none;
+                text-decoration: none;
+            }
+
+			.menu-list{
+				text-align: right;
+				.menu-list-item{
+					 display: inline-block;
+					.menu-link{
+						color: #000;
+						display: inline-block;
+						padding: 10px 20px;
+						font-size: 14px;
+						text-transform: uppercase;
+						font-family: $primary-font-bld;
+                        text-decoration: none;
+                        transition: .6s;
+
+                        &:hover{
+                            background-color: green;
+                            color: $hover-color;
+                        }
+                   }
+
+				}
+			}
+ 		}
+
+        @media screen and ( max-width: 848px){
+                
+                &__logo{
+                    width: 100%;
+                    float: none;
+                    text-align: center;
+                }
+                &__menu{
+                    width: 100%;
+                    float: none;
+                    .menu-list{
+                        text-align: center;
+                    }
+                }
+        }
+   
+        @media screen and ( max-width: 600px){
+
+             &__menu {
+                   .res-menu{
+                    display: block;
+                   }
+                .menu-list{
+                        display: none;
+                      .menu-list-item{
+                           display: block;
+                      }
+                }
+             }
+        }
+
+
+ 	}
+ }
+
+ 

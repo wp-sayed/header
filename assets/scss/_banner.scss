@@ -1,0 +1,43 @@
+/*BANNER STYLE*/
+
+.banner{
+	width: 100%;
+	height: 90vh;
+	background-image: linear-gradient( rgba(black,.4),rgba(black,.6) ),url('../img/806117.jpg');
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+	&__container{
+		&__banner-content{
+			margin-top: 7rem;
+           @include mid-con;
+           text-align: center; 
+
+           .heading{
+           	 font-family: $heading-font;
+           	 font-weight: normal;
+           	 color: #fff;
+           	 text-align: center;
+           }
+           .description{
+           	  text-align: center;
+           	  color: #fff;
+           }
+
+           .button{
+           	  display: inline-block;
+           	  padding: 10px 20px;
+           	  background-color: #fff;
+           	  text-decoration: none;
+           	  color: #000;
+           	  transition: .5s;
+
+           	  &:hover{
+           	  	background-color: red;
+           	  	color: #fff;
+           	  }
+           }
+		}
+	}
+}
